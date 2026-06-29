@@ -169,11 +169,14 @@ Try these exact prompts in the playground UI to test each path of the system:
 
 ## Assets
 
-- **Cover Page Banner**: [cover_page_banner.png](file:///c:/Users/Lenovo/Desktop/AI%20agents/adk-workspace/digital-clutter-cleaner/assets/cover_page_banner.png)
-- **Workflow Architecture Diagram**: [architecture_diagram.png](file:///c:/Users/Lenovo/Desktop/AI%20agents/adk-workspace/digital-clutter-cleaner/assets/architecture_diagram.png)
+### Cover Page Banner
+![Cover Page Banner](assets/cover_page_banner.png)
+
+### Workflow Architecture Diagram
+![Workflow Architecture Diagram](assets/architecture_diagram.png)
 
 ---
 
 ## Demo Script
 
-The spoken narration script to record the project demonstration video is located at: **[DEMO_SCRIPT.txt](file:///c:/Users/Lenovo/Desktop/AI%20agents/adk-workspace/digital-clutter-cleaner/DEMO_SCRIPT.txt)**
+The spoken narration script to record the project demonstration video is located at: **[DEMO_SCRIPT.txt](DEMO_SCRIPT.txt)**
