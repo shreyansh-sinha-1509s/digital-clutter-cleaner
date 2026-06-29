@@ -122,6 +122,22 @@ Try these exact prompts in the playground UI to test each path of the system:
 
 ---
 
+## Assets
+
+### Cover Page Banner
+![Cover Page Banner](assets/cover_page_banner.png)
+
+### Workflow Architecture Diagram
+![Workflow Architecture Diagram](assets/architecture_diagram.png)
+
+---
+
+## Demo Script
+
+The spoken narration script to record the project demonstration video is located at: **[DEMO_SCRIPT.txt](DEMO_SCRIPT.txt)**
+
+---
+
 ## Troubleshooting
 
 1. **Error**: `pydantic_core._pydantic_core.ValidationError` on Startup
@@ -164,19 +180,3 @@ Try these exact prompts in the playground UI to test each path of the system:
    ```
 
 ⚠ NEVER push `.env` to GitHub. Your API key will be exposed publicly.
-
----
-
-## Assets
-
-### Cover Page Banner
-![Cover Page Banner](assets/cover_page_banner.png)
-
-### Workflow Architecture Diagram
-![Workflow Architecture Diagram](assets/architecture_diagram.png)
-
----
-
-## Demo Script
-
-The spoken narration script to record the project demonstration video is located at: **[DEMO_SCRIPT.txt](DEMO_SCRIPT.txt)**
