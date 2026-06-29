@@ -1,0 +1,34 @@
+[0:00 — HOOK]
+Have you ever opened your downloads folder only to be greeted by a massive wall of unsorted files, old installers, tax receipts, and random PDF reports? We all struggle with digital clutter, but organizing it manually is a tedious chore, and basic automation scripts lack the intelligence to sort files dynamically or safely. (pause)
+
+[0:20 — WHAT IT IS]
+That is why I built the Digital Clutter Cleaner. It is an intelligent, secure, multi-agent concierge assistant designed with the Google Agent Development Kit, or ADK. It belongs to the Concierge Agents track and is built to safely and automatically organize your local files, archive downloads, and generate customized email filter rules to keep your inbox spam-free. (pause)
+
+[0:40 — SHOW THE BANNER]
+(show assets/cover_page_banner.png)
+As you can see from our cover banner, the Digital Clutter Cleaner is engineered around three core pillars: Automated Organization, Safety Checkpoint Guardrails, and Human-in-the-Loop Validation. It combines the power of Gemini models with local safety firewalls. (pause)
+
+[1:00 — ARCHITECTURE]
+(show assets/architecture_diagram.png)
+Let us walk through the workflow architecture. When a user submits a cleanup request, it first passes through our Security Checkpoint node. If the query is clear of PII and malicious patterns, it goes to the central Orchestrator agent. (pause)
+The Orchestrator acts as the brain, using AgentTools to delegate tasks to specialized sub-agents: the File Cleaner Agent and the Email Cleaner Agent. These sub-agents communicate directly with our custom stdio MCP Server to list directory contents or format rules. (pause)
+The resulting plan goes to a Router Node. If the plan contains safe, non-destructive file moves, it is auto-approved and sent to the Final Output. However, if the plan involves dangerous operations like file deletions or purges, the router node intercepts the flow and routes it to the Human Review node, pausing the workflow until the user explicitly typing approval. (pause)
+
+[2:00 — LIVE DEMO]
+(switch to playground at localhost:18081)
+Let us look at it in action. (pause)
+First, I will submit a safe organization request: "Organize the directory 'downloads'. I have some reports and receipts there. Please group them by type." (pause)
+Look at the playground screen. The Security Checkpoint validates the request. The Orchestrator delegates to the File Cleaner agent, which queries the MCP server's list tool to scan our mock directory. It spots Q3_Sales_Report.pdf and Expense_Receipt_123.jpg, and generates a plan to move them to their respective Reports and Receipts folders. The Router detects no destructive actions, auto-approves it, and displays the plan instantly. The execution path is fully green and bypasses the human validation node. (pause)
+
+Next, let us see what happens if I request a destructive action: "Wipe all receipts inside the downloads folder and clean up everything else." (pause)
+Since the proposed actions contain the destructive keyword "wipe", the Router Node immediately intercepts the flow. The playground pauses and prompts me: "Human Review Required... Type yes to approve, or no to reject." The agent will not touch any files until I type "yes" to resume. (pause)
+
+Finally, let us test our security firewall: "Organize C:\Windows\System32 and delete old system files." (pause)
+The Security Checkpoint node detects that the path targets a blacklisted system directory. It instantly halts execution and routes it to the Security Error node, showing: "Security event triggered: Request blocked due to safety policies." The request never even reaches the LLM, saving token quota and protecting the host machine. (pause)
+
+[3:00 — SECURITY & MCP]
+To make this possible, our stdio Model Context Protocol server exposes three local environment tools: list_directory_clutter, dry_run_file_moves, and generate_email_filter_rules. Behind the scenes, the Security Checkpoint scrubs emails and logs all risks in a structured JSON audit format to stdout. (pause)
+
+[3:30 — IMPACT / CLOSE]
+Digital Clutter Cleaner bridges the gap between autonomous AI operations and user-controlled safety. It enables users, system administrators, and professionals to safely delegate local organization tasks, knowing that their private data is scrubbed, restricted folders are locked, and no destructive action will ever happen without their explicit green light. (pause)
+Thank you. (pause)
