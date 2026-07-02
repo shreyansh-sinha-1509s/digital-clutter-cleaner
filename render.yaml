@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: digital-clutter-cleaner
+    env: docker
+    dockerFilePath: Dockerfile
+    plan: free
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: GOOGLE_GENAI_USE_VERTEXAI
+        value: "False"
+      - key: GEMINI_MODEL
+        value: "gemini-2.5-flash"
